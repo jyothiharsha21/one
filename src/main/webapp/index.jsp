@@ -826,8 +826,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>JyothiHarsha Collection 2026</h1>
-            <p>Discover the latest trends in fashion, technology and accessories with up to 60% off selected items</p>
+            <h1>Summer Collection June2026</h1>
+            <p>Discover the latest trends in fashion, technology and accessories with up to 70% off selected items</p>
             <div class="hero-buttons">
                 <a href="#" class="btn btn-primary">Shop Now</a>
                 <a href="#" class="btn btn-secondary">Explore Deals</a>
