@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('code'){
             steps{
-                git credentialsId: 'harsha', url: 'https://github.com/jyothiharsha21/one.git'
+                git cbranch: 'devops-cicd', credentialsId: 'harsha', url: 'https://github.com/jyothiharsha21/one.git'
             }
         }
         stage('Build'){
@@ -20,9 +20,17 @@ pipeline{
             }
         }
         stage('Deploy'){
+            input{
+                message "can I proceed with the Deployment?"
+            }
             steps{
                 deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat', path: '', url: 'http://13.61.19.102:8080')], contextPath: 'webapp', war: 'target/*.war'
             }
+        }
+    }
+    post{
+        always{
+            echo "Pipeline is Success and the application is deployed"
         }
     }
 }
